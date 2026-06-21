@@ -36,9 +36,7 @@ def train_dqn_dynamic(reward_mode="standard", checkpoint_file=None):
     device = "cuda" if torch.cuda.is_available() else "cpu"
     print("Device:", device)
     print("Reward mode:", reward_mode)
-    print("LiDAR:", env.n_lidar)
-    print("State dim:", state_dim)
-
+   
     episodes = 8000
     batch_size = 64
     gamma = 0.99
@@ -127,6 +125,9 @@ def train_dqn_dynamic(reward_mode="standard", checkpoint_file=None):
         f"\nTraining from episode {start_episode} to {episodes} | "
         f"Obstacles: {current_obstacles} | Save dir: {save_dir}\n"
     )
+
+    print("LiDAR:", env.n_lidar)
+    print("State dim:", state_dim)
 
     for episode in tqdm(range(start_episode, episodes + 1)):
 
