@@ -36,6 +36,8 @@ def train_dqn_dynamic(reward_mode="standard", checkpoint_file=None):
     device = "cuda" if torch.cuda.is_available() else "cpu"
     print("Device:", device)
     print("Reward mode:", reward_mode)
+    print("LiDAR:", env.n_lidar)
+    print("State dim:", state_dim)
 
     episodes = 8000
     batch_size = 64
