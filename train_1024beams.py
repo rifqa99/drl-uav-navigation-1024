@@ -45,7 +45,7 @@ def train_dqn_dynamic(reward_mode="standard", checkpoint_file=None):
     buffer_capacity = 50000
     target_update_frequency = 10
 
-    old_save_dir = f"/content/drive/MyDrive/drl-uav-new/outputs_dynamic_{reward_mode}"
+    old_save_dir = f"/content/drive/MyDrive/drl-uav-1024/outputs_dynamic_{reward_mode}"
     save_dir = os.path.join(old_save_dir, "checkpoints_8000")
     checkpoint_dir = os.path.join(save_dir, "checkpoints")
     os.makedirs(checkpoint_dir, exist_ok=True)
