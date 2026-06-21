@@ -58,9 +58,6 @@ class UAVLiDARDynamicEnv(gym.Env if gym is not None else object):
         self.omega = 0.0
 
         self.action_space = spaces.Discrete(5)
-
-        # Notice: If you are using a flat FC network, obs_dim is 1024 + 5.
-        # However, if using a Frame Stack of 3, the agent wrapper will change this.
         obs_dim = self.n_lidar + 5 
         self.observation_space = spaces.Box(
             low=-1.0,
