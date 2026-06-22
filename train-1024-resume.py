@@ -65,7 +65,7 @@ def train_dqn_dynamic(reward_mode="standard", checkpoint_file=None):
         "stage_sr_history_dynamic.npy",
     ]
 
-    histories = {name: load_history(old_save_dir, name) for name in history_files}
+    histories = {name: load_history(old_save_dir,"checkpoints", name) for name in history_files}
 
     current_obstacles = 2
     start_episode = 1
