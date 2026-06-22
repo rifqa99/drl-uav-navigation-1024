@@ -45,7 +45,7 @@ def train_dqn_dynamic(reward_mode="standard", checkpoint_file=None):
     buffer_capacity = 50000
     target_update_frequency = 10
 
-    old_save_dir = f"/content/drive/MyDrive/drl-uav-1024/outputs_dynamic_standard"
+    old_save_dir = f"/content/drive/MyDrive/drl-uav-1024/outputs_dynamic_standard/checkpoints_8000"
     save_dir = os.path.join(old_save_dir, "checkpoints_new")
     checkpoint_dir = os.path.join(save_dir, "checkpoints")
     os.makedirs(checkpoint_dir, exist_ok=True)
@@ -65,7 +65,7 @@ def train_dqn_dynamic(reward_mode="standard", checkpoint_file=None):
         "stage_sr_history_dynamic.npy",
     ]
 
-    histories = {name: load_history(old_save_dir,"checkpoints", name) for name in history_files}
+    histories = {name: load_history(old_save_dir, name) for name in history_files}
 
     current_obstacles = 2
     start_episode = 1
