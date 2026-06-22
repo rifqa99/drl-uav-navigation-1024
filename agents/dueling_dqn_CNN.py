@@ -2,9 +2,9 @@ import torch
 import torch.nn as nn
 
 class DuelingDQN(nn.Module):
-    def __init__(self, state_dim=3087, action_dim=5, num_beams=1024, frame_stack=3):
+    def __init__(self, state_dim=1551, action_dim=5, num_beams=512, frame_stack=3):
         """
-        State dim calculation: (1024 beams * 3 frames) + (5 kinematics * 3 frames) = 3087
+        State dim calculation: (512 beams * 3 frames) + (5 kinematics * 3 frames) = 1551
         """
         super(DuelingDQN, self).__init__()
         
