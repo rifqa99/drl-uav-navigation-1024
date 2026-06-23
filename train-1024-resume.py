@@ -37,7 +37,7 @@ def train_dqn_dynamic(reward_mode="standard", checkpoint_file=None):
     print("Device:", device)
     print("Reward mode:", reward_mode)
 
-    episodes = 8000
+    episodes = 10000
     batch_size = 64
     gamma = 0.99
     lr = 1e-4
